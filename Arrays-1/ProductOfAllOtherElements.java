@@ -7,35 +7,35 @@ If our input was [3, 2, 1],the expected out put wouldbe [2,  3, 6].  */
 
 // O(n^2)
 import java.util.Scanner;
-public class Solution {
-    public static void main(String[] args){
+public class ProductOfAllOtherElements {
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int n= scan.nextInt();
+        int n = scan.nextInt();
         int[] arr = new int[n];
-        for(int i=0;i<n;i++){
+        for (int i = 0; i < n; i++) {
             arr[i] = scan.nextInt();
         }
 
         int[] newarr = new int[n];
 
-        for(int i=0;i<n;i++){
+        for (int i = 0; i < n; i++) {
             int product = 1;
-            for(int j = 0 ;j<n;j++){
-                if(j!=i){
-                    product = product* arr[j];
+            for (int j = 0; j < n; j++) {
+                if (j != i) {
+                    product = product * arr[j];
                 }
             }
-            newarr[i]=product;
+            newarr[i] = product;
         }
 
-        for(int i=0;i<n;i++){
-            System.out.print(newarr[i]+" ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(newarr[i] + " ");
         }
+    }
 }
-
 // O(n)
 
-import java.util.Scanner;
+/*import java.util.Scanner;
 public class Solution {
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
@@ -59,5 +59,5 @@ public class Solution {
             System.out.print(newarr[i]+" ");
         }
 }
-
+*/
   
