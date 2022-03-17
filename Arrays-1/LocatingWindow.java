@@ -13,6 +13,9 @@ public class LocatingWindow {
 
         int n= scan.nextInt();
         int[] arr = new int[n];
+
+
+
         int[] sortedarr = new int[n];
 
         for(int i=0;i<n;i++){
@@ -38,5 +41,32 @@ public class LocatingWindow {
         System.out.println(s+" "+e);
 
     }
+
+    // Time: O(n)
+    // Space: O(1)
+
+    public static void findWindow(int[] arr, int n){
+        int left=-1,right=-1;
+        int maxSeen = Integer.MIN_VALUE,minSeen = Integer.MIN_VALUE;
+
+        for(int i=0;i<n;i++){
+            maxSeen = Integer.max(maxSeen,arr[i]);
+            if(arr[i]<maxSeen){
+                right=i;
+            }
+        }
+
+        for(int i=n-1;i>0;i--){
+            minSeen = Integer.min(minSeen,arr[i]);
+            if(arr[i]>minSeen){
+                left=i;
+            }
+        }
+
+        System.out.println(left+" "+right);
+
+    }
+
+
 
 }
