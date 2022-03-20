@@ -23,6 +23,7 @@ public class LocatingWindow {
             sortedarr[i] = arr[i];
         }
 
+
         Arrays.sort(sortedarr);
 
         int s=-1 ,e=-1;
